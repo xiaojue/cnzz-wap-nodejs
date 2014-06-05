@@ -1,6 +1,11 @@
+var http = require('http');
+var https = require('https');
+var url = require('url');
+
 function CS(siteId,scheme) {
 	this.siteId = siteId;
-	this.scheme = scheme;
+	this.scheme = scheme + '://';
+    this.request = (scheme == 'http') ? http.request : https.request;
 	this.imageDomain = 'c.cnzz.com';
 }
 
@@ -20,7 +25,19 @@ CS.prototype = {
 	},
 	trackPageView: function(referer) {
 		return this._getImageUrl(referer);
-	}
+	},
+    trackPage:function(referer){
+       var requestUrl = this.trackPageView(referer); 
+       var parseObj = url.parse(requestUrl);
+       this.request({
+            hostname:parseObj.host,
+            port:parseObj.port || 80,
+            path:parseObj.path,
+            method:'GET'
+       }).on('error',function(e){
+        console.error(e);      
+      }).end();
+    }
 };
 
 module.exports = CS;
