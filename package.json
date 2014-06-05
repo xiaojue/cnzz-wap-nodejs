@@ -1,0 +1,11 @@
+{
+	"name":"cnzz-wap-nodejs",
+	"version":"0.0.1",
+	"description":"cnzz wap by nodejs",
+	"keywords":[
+		"cnzz",
+		"wap"
+	],
+	"main":"cs.js",
+	"license":"MIT"
+}
