@@ -11,6 +11,8 @@ npm install cnzz-wap-nodejs
 
 ```js
 var cnzz_wap = require("cnzz-wap-nodejs");
+var siteId = 1234567; //your cnzz siteid
+var scheme = 'http'; //or https
 var cnzz = new cnzz_wap(siteId,scheme);
 
 
