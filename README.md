@@ -1,7 +1,8 @@
 cnzz-wap-nodejs
 ===============
 
-cnzz wap statistics by nodejs
+cnzz wap statistics by nodejs.
+more Information : http://tongji.cnzz.com/static/about/wap/index.html
 
 ---
 
@@ -24,3 +25,6 @@ app.get("*",function(req,res,next){
 });
 
 ```
+
+
+
