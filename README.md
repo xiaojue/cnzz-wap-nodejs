@@ -7,7 +7,7 @@ cnzz wap statistics by nodejs
 
 ```bash
 npm install cnzz-wap-nodejs
-``
+```
 
 ```js
 var cnzz_wap = require("cnzz-wap-nodejs");
